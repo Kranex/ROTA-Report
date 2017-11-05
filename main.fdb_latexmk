@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1509919828 "main.tex" "main.pdf" "main" 1509919829
+["pdflatex"] 1509920725 "main.tex" "main.pdf" "main" 1509920726
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -73,10 +73,10 @@
   "/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1496916232 1888048 f2c5faed5981a516f406b2ccc20bff71 ""
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1496916261 3873396 a585b6afbcaf0bf48bd791406a386eeb ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
-  "bib.tex" 1509919822 506 c430ae1a8bd9af18ce941fd33917cff3 ""
-  "main.aux" 1509919828 1758 40ad241b049292badfd67cfaea5ac539 ""
-  "main.tex" 1509918697 975 15435344f79047c0e5653a11c75eaf39 ""
-  "main.toc" 1509919828 557 accd0d5469c73eb5edde2e58fd6aabaa ""
+  "bib.tex" 1509920701 506 a433f3524aba8dd8c9c985380b5276d9 ""
+  "main.aux" 1509920726 1758 40ad241b049292badfd67cfaea5ac539 ""
+  "main.tex" 1509920696 977 12aec516edbd9b77f01114454a0532eb ""
+  "main.toc" 1509920726 557 accd0d5469c73eb5edde2e58fd6aabaa ""
   "sections/design/design.tex" 1509917201 1904 bc2a0cb0dcda388eeb954d24b8c1efd8 ""
   "sections/eval/evaluation.tex" 1509897557 4335 8326dec4fd3a31e53b1f8aa155200397 ""
   "sections/probAnal/problemAnalysis.tex" 1509901479 883 d421e890a488f08212fac81a682b6c95 ""
@@ -89,7 +89,7 @@
   "sections/testRes/testResults.tex" 1509917749 1016 0e87502fc141f4cb30ac1ffda893bfff ""
   "sections/testRes/top.jpeg" 1509917403 187080 686dcc16a1ca4d6b9f6ab8c888c75c89 ""
   (generated)
-  "main.pdf"
-  "main.toc"
   "main.aux"
   "main.log"
+  "main.pdf"
+  "main.toc"
