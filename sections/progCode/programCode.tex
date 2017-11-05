@@ -1,12 +1,13 @@
 \section{Program Code}
 \par The code of ROTA is split into three seperate programs.
 \begin{itemize}
-  \item The controller - Written in Java. https://github.com/Kranex/ROTA-Controller
-  \item The Server - Written in C. https://github.com/Kranex/ROTA-Server
-  \item The Interpreter - Written in Arduino C/C++. https://github.com/NotSoScientific/ROTA-Interpreter
+  \item The controller - Written in Java. \cite{Controller}
+  \item The Server - Written in C. \cite{Server}
+  \item The Interpreter - Written in Arduino C/C++. \cite{Interpreter}
 \end{itemize}
-In the interest of saving trees, the 700+ lines of code are not included in this document,
-if you wish to find them please use the links above to access them. A description of
+
+\noindent In the interest of saving trees, the 700+ lines of code are not included in this document,
+if you wish to find them please use the links supplied in the references. A description of
 each program, however, is provided below.
 
 \subsection{The Controller}
@@ -63,7 +64,7 @@ This job could have been done with the Raspberry Pi alone, however, we would the
 had the constraints of few GPIO to communicate with, as well as the lower voltage of
 the GPIO (3.3V instead of 5V) to deal with. Thus we decided to use the Arduino as the
 step between the Raspberry Pi and the extra peripherals.
-\par After initialising the serial connections and any global variables, the arduino then
+\par After initialising the serial connections and any global variables, the Arduino then
 reads a single byte from the serial buffer and acts upon it. It keeps count of which particular
 byte it is reading and then, as we have it currently set up, if it is the left y, uses
 it to set the motor speed and direction or if it is the right x, use it to set the

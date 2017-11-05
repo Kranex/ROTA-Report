@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.6.8)  5 NOV 2017 17:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.6.8)  5 NOV 2017 22:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -288,7 +288,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [1] (./sections/probDesc/problemDescription.tex) (./sections/probAnal/problemAnalysis.tex) (./sections/design/design.tex [2]
+ [1] (./sections/probDesc/problemDescription.tex) (./sections/probAnal/problemAnalysis.tex) (./sections/design/design.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 5.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
@@ -296,33 +296,53 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
-) (./sections/progCode/programCode.tex [3] [4]) (./sections/testRes/testResults.tex [5] <sections/testRes/app1.png, id=27, 1927.2pt x 1084.05pt>
+ [2]) (./sections/progCode/programCode.tex [3]) (./sections/testRes/testResults.tex <sections/testRes/app1.png, id=21, 1927.2pt x 1084.05pt>
 File: sections/testRes/app1.png Graphic file (type png)
  <use sections/testRes/app1.png>
 Package pdftex.def Info: sections/testRes/app1.png used on input line 5.
 (pdftex.def)             Requested size: 271.7835pt x 152.87422pt.
- <sections/testRes/app2.png, id=29, 1927.2pt x 1084.05pt>
+ <sections/testRes/app2.png, id=23, 1927.2pt x 1084.05pt>
 File: sections/testRes/app2.png Graphic file (type png)
  <use sections/testRes/app2.png>
 Package pdftex.def Info: sections/testRes/app2.png used on input line 10.
 (pdftex.def)             Requested size: 271.7835pt x 152.87422pt.
-) [6 <./sections/testRes/app1.png> <./sections/testRes/app2.png>] (./sections/eval/evaluation.tex
+ <sections/testRes/left.jpeg, id=24, 1119.18124pt x 901.3675pt>
+File: sections/testRes/left.jpeg Graphic file (type jpg)
+ <use sections/testRes/left.jpeg>
+Package pdftex.def Info: sections/testRes/left.jpeg used on input line 15.
+(pdftex.def)             Requested size: 271.7835pt x 218.89081pt.
+ [4 <./sections/testRes/app1.png>] <sections/testRes/right.jpeg, id=29, 1252.68pt x 874.26625pt>
+File: sections/testRes/right.jpeg Graphic file (type jpg)
+ <use sections/testRes/right.jpeg>
+Package pdftex.def Info: sections/testRes/right.jpeg used on input line 20.
+(pdftex.def)             Requested size: 271.7835pt x 189.68446pt.
+ <sections/testRes/top.jpeg, id=30, 898.35625pt x 1270.7475pt>
+File: sections/testRes/top.jpeg Graphic file (type jpg)
+ <use sections/testRes/top.jpeg>
+Package pdftex.def Info: sections/testRes/top.jpeg used on input line 25.
+(pdftex.def)             Requested size: 271.7835pt x 384.44594pt.
+ [5 <./sections/testRes/app2.png> <./sections/testRes/left.jpeg>]) (./sections/eval/evaluation.tex
 Missing character: There is no Â in font cmr10!
 Missing character: There is no   in font cmr10!
-) [7] [8] (./main.aux) ) 
+ [6 <./sections/testRes/right.jpeg> <./sections/testRes/top.jpeg>]) (./bib.tex [7]
+Underfull \hbox (badness 5622) in paragraph at lines 6--7
+[]\OT1/cmr/m/n/10.95 Strik, O.H.P (2017). The Source Code for the ROTA Server. Avail-able on:
+ []
+
+) [8] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3597 strings out of 493014
- 49268 string characters out of 6133352
- 132830 words of memory out of 5000000
- 7043 multiletter control sequences out of 15000+600000
+ 3618 strings out of 493014
+ 49714 string characters out of 6133352
+ 132842 words of memory out of 5000000
+ 7058 multiletter control sequences out of 15000+600000
  11660 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,6n,32p,582b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (9 pages, 134703 bytes).
+Output written on main.pdf (9 pages, 615915 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
+ 66 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
