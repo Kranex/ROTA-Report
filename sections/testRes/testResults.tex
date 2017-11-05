@@ -1,50 +1,12 @@
 \section{Tests and Results}
-\par Throughout the development of ROTA there have been things that needed to be tested.
-After all there are three devices that could fail. The first thing that was programmed was
-the app, after fixing many small issues that showed up throughout development, three major
-problems showed.
-\begin{enumerate}
-  \item If the app is disconnected from the server, by loosing the wifi or something
-  similar, it would never reconnect. %%??%%??%%??%%??%%??
-  \item If the screen focus shifts, causing the app to leave fullscreen, it never reverts.
-  This does not impact useability, however it is annoying.
-  \item If the user leaves the app, Android will `suspend' it. This is great, however,
-  it reaks havoc with the server connection. Very strange things can happen, the best
-  you can hope for is that the app crashes, at worst, the app tries to reistablish the
-  connection and you end up with 5 or 6 rogue threads spamming TCP Requests.
-  To prevent this, the app was set up to destroy itself completely when minimised. This
-  looses no functionality however, as the app would have to be restarted when it comes
-  out of suspension anyway, it is just easier to restart from the beginning of the program.
-\end{enumerate}
-There were never really any issues with the server, par some minor confusion caused by
-C's lack of a 'byte' type and chars being unsigned on some systems but not others.
-This was easily fixed by declaring all chars, being used as bytes, as signed chars.
 \par
-Another problem came with the arduino, it would not accept signed bytes across serial.
-this meant that either the transmission method needed to be revised or that unsigned bytes
-needed to be sent instead. As all bytes were between -127 and 127, adding 127 before sending
-and subtracting it after receiving solved this problem.
-\par
-The biggest problem of them all was how to supply power to the Arduino,
-the Raspberry Pi and the motor shield. In the end it was decided the Raspberry Pi and
-the motor shield would receive power from a large USB powerbank. The Raspberry Pi would
-then power the Arduino. This seemed to work on the bench when the arduino was plugged into
-the PC for tuning the servo and running light tests on the motor. However, the Raspberry Pi
-could not deliver the current to the Arduino to power the servo and the logic side of the
-motor controller, this would crash the Raspberry Pi and all hell would break loose.
-To counter this issue the Arduino was given its very own 9v battery. While this is not
-perfect, it does seem to solve the problem. Idealy a dedicated Lithium Polymer
-battery would have been preferred, a 2200mah 7.4v LiPo would be small and light enough
-to fit on the frame, however they are not exactly cheap and the Raspberry Pi would require
-something extra to step the voltage down to 5v.
-\par
-After the power problem was sorted, the car worked almost perfectly, it can pick up quite
-some speed, every now and then there is a slight delay in the controls however not enough
-to cause serious issues. The exact reason for the delay is not understood, amongst other things
-it could be due to the Arduino being flooded with more packets than it can handle, or it
-could be because the Raspberry Pi suffers from a similar problem. The only minor faults are
-that the servo is rather poorly attached to the steering, allowing for a small margin of
-free movement. This means that the steering is never exactly centered and the car needs
-constant steering adjustments to stay on course. It was also noticed that the front wheels
-would lock on the frame when turning. This was because all the weight had crushed the suspension.
-To fix this the wheel arches were removed.
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.6\textwidth]{sections/testRes/app1}
+    \caption{figure}{A photo showing the joysticks in the app.}
+\end{figure}
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.6\textwidth]{sections/testRes/app2}
+    \caption{figure}{Another photo showing the joysticks in the app. This shows how the joysticks will move when the user touches the screen.}
+\end{figure}

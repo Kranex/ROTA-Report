@@ -1,22 +1,24 @@
 \section{Design}
 \par
-In order to build the actual car, we went on to select our hardware. We used the following:
+In order to build the actual car, the hardware used is as follows:
+\begin{itemize}
+\item Arduino Uno
+\item Velleman Stepper Motor Controller
+\item Servo from the Arduino started kit
+\item Raspberry Pi B Model (v1.2)
+\item Generic Wifi USB Adapter
+\item 8GB Micro SD card
+\item RC car which would have otherwise been forgotten about
+\item Power bank with 2 USB ports to power the Arduino
+\item Jumper wires
+\item 9V block
+\end{itemize}
+The Raspberry Pi was first configured by loading Raspbian on it, but this proved to be flawed when setting a Wi-Fi network on the Pi, there were many complications with the network. Therefore, it was decided Arch Linux would be better suited. A server for the Raspberry Pi with which our app communicates was then written in C.
 
- - Arduino Uno
- - Velleman Stepper Motor Controller
- - Servo from the Arduino started kit
- - Raspberry Pi B Model (v1.2)
- - Generic Wifi USB Adapter
- - 8GB Micro SD card
- - RC car which would have otherwise been forgotten about
- - Power bank with 2 USB ports to power the Arduino
- - Jumper wires
- - 9V block
+The server and app were designed such that the app sends a packet describing the position of the two joysticks, this packet consists of a total of 5 bytes. Two for each joystick and an extra one in case something needed to be added at a later date. The server receives this packet from the app, and sends it via a serial connection to the Arduino. This is then read by the Arduino, which translates the packet into the motor speed and servo direction.
 
-We then set to work. We configured the Raspberry Pi by loading Raspbian on it, but this proved to be flawed when we wanted to set up our own Wi-Fi network on the Pi. Therefor, we chose to switch to Arch Linux, and worked from there. We have written a C server, with which our app communicates (it listens on the network for a static IP address, hence our own wifi network).
+At the same time, the controller app was developed. Android was decided as deployment platform because of its hefty support documentation and general ease of use. The app would have two joysticks, and sends a packet of 5 bytes to our server. The packet contains an undefined byte, the x and y for the left joystick and the x and y for the right.
 
-After we managed to get the wifi working, we set to work on the server. The server has been designed such that our app sends an array containing the position of our joysticks, sending a total of 5 indexes. The server takes this input from the app, and sends it via a serial connection to the Arduino, one index per data transfer. This is then read by the Arduino, which then controls the motor and servo (steering). 
+The last piece to develop was the code for the Arduino to interpret the packet of data sent to it from the server.
 
-Then, we had to get the controller working. We wrote an Android app that has two joysticks, and sends an array of 5 bytes to our server. The array contains a control byte, two bytes, x and y, for the left joystick, and two, again x and y, for the right. The control byte can be used for an emergency stop for instance.
-
-Finally, it was a matter of assembling all components, and making the car self powered. This is where the power bank came in. We disassembled an old RC car, wired up the motor to our motor controller, placed all components on the body, hooked up the servo, and after some software adjustments, we were able to drive the car.
+Finally, it was just a matter of assembling the components. After piling it on to an old RC car frame all the components listed above, we would have an, odd looking but hopefully working, Android controlled RC Car.

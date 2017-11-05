@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.6.8)  5 NOV 2017 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.6.8)  5 NOV 2017 17:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -171,21 +171,29 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \epsfxsize=\dimen123
 \epsfysize=\dimen124
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count122
+\float@exts=\toks21
+\float@box=\box28
+\@float@everytoks=\toks22
+\@floatcapt=\box29
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -223,17 +231,17 @@ LaTeX Font Info:    ... okay on input line 10.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count122
+\scratchcounter=\count123
 \scratchdimen=\dimen125
-\scratchbox=\box28
-\nofMPsegments=\count123
-\nofMParguments=\count124
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count125
+\scratchbox=\box30
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count126
 \MPscratchDim=\dimen126
-\MPnumerator=\count126
-\makeMPintoPDFobject=\count127
-\everyMPtoPDFconversion=\toks22
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
+\everyMPtoPDFconversion=\toks24
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO)
  (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -267,41 +275,54 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+LaTeX Font Info:    Try loading font information for U+msa on input line 18.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+LaTeX Font Info:    Try loading font information for U+msb on input line 18.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [1] (./main.toc)
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [2] (./sections/probDesc/problemDescription.tex) (./sections/probAnal/problemAnalysis.tex [3]) (./sections/design/design.tex
-[4]) (./sections/progCode/programCode.tex [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 4.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+ [1] (./sections/probDesc/problemDescription.tex) (./sections/probAnal/problemAnalysis.tex) (./sections/design/design.tex [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 5.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
- [6]) (./sections/testRes/testResults.tex [7]) (./sections/eval/evaluation.tex [8]) [9] (./main.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
+) (./sections/progCode/programCode.tex [3] [4]) (./sections/testRes/testResults.tex [5] <sections/testRes/app1.png, id=27, 1927.2pt x 1084.05pt>
+File: sections/testRes/app1.png Graphic file (type png)
+ <use sections/testRes/app1.png>
+Package pdftex.def Info: sections/testRes/app1.png used on input line 5.
+(pdftex.def)             Requested size: 271.7835pt x 152.87422pt.
+ <sections/testRes/app2.png, id=29, 1927.2pt x 1084.05pt>
+File: sections/testRes/app2.png Graphic file (type png)
+ <use sections/testRes/app2.png>
+Package pdftex.def Info: sections/testRes/app2.png used on input line 10.
+(pdftex.def)             Requested size: 271.7835pt x 152.87422pt.
+) [6 <./sections/testRes/app1.png> <./sections/testRes/app2.png>] (./sections/eval/evaluation.tex
+Missing character: There is no Â in font cmr10!
+Missing character: There is no   in font cmr10!
+) [7] [8] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3527 strings out of 493014
- 48226 string characters out of 6133352
- 131443 words of memory out of 5000000
- 6980 multiletter control sequences out of 15000+600000
+ 3597 strings out of 493014
+ 49268 string characters out of 6133352
+ 132830 words of memory out of 5000000
+ 7043 multiletter control sequences out of 15000+600000
  11660 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,32p,252b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,6n,32p,582b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (10 pages, 94705 bytes).
+Output written on main.pdf (9 pages, 134703 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

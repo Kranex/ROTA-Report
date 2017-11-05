@@ -1,48 +1,48 @@
 \section{Evaluation}
-par Throughout the development of ROTA there have been things that needed to be tested.
-After all there are three devices that could fail. The first thing that was programmed was
+\par Throughout the development of ROTA there have been things that needed to be tested.
+After all, there are three devices that could fail. The first thing that was programmed was
 the app, after fixing many small issues that showed up throughout development, three major
 problems showed.  
 \begin{enumerate}
-  \item If the app is disconnected from the server, by loosing the wifi or something
-  similar, it would never reconnect. To fix this, the client initisation thread, was
+  \item If the app is disconnected from the server, by losing the wifi or something
+  similar, it would never reconnect. To fix this, the client initialisation thread was
   extended to perpetually loop, if the client was not connected, it would try to reconnect it,
-  otherwise, it would send a update packet. This also helped limit the number of packets
+  otherwise, it would send an update packet. This also helped limit the number of packets
   being sent to the server as originally a packet would be sent every time the user
-  stimulated the touch screen, this helped prevent the arduino from becomming overloaded.
+  stimulated the touch screen, this helped prevent the Arduino from becomming overloaded.
   \item If the screen focus shifts, causing the app to leave fullscreen, it never reverts.
-  This does not impact useability, however it is annoying. This was fixed by giving the
-  Android imersive environment the sticky flag. Now, popups and dragging the system bar into
-  view does not resize the app as they are rendered 'over' the app. When they disapear
+  This does not impact usability, however it is annoying. This was fixed by giving the
+  Android immersive environment the sticky flag. Now, popups and dragging the system bar into
+  view does not resize the app as they are rendered 'over' the app. When they disappear
   the app is still fullscreen.
   \item If the user leaves the app, Android will `suspend' it. This is great, however,
-  it reaks havoc with the server connection. Very strange things can happen, the best
+  it wreaks havoc with the server connection. Very strange things can happen, the best
   you can hope for is that the app crashes, at worst, the app tries to reistablish the
   connection and you end up with 5 or 6 rogue threads spamming TCP Requests.
   To prevent this, the app was set up to destroy itself completely when minimised. This
-  looses no functionality however, as the app would have to be restarted when it comes
+  loses no functionality, however, as the app would have to be restarted when it comes
   out of suspension anyway, it is just easier to restart from the beginning of the program.
 \end{enumerate}
 There were never really any issues with the server, par some minor confusion caused by
 C's lack of a 'byte' type and chars being unsigned on some systems but not others.
 This was easily fixed by declaring all chars, being used as bytes, as signed chars.
 \par
-Another problem came with the arduino, it would not accept signed bytes across serial.
+Another problem came with the Arduino, it would not accept signed bytes across serial.
 this meant that either the transmission method needed to be revised or that unsigned bytes
 needed to be sent instead. As all bytes were between -127 and 127, adding 127 before sending
 and subtracting it after receiving solved this problem.
 \par
 The biggest problem of them all was how to supply power to the Arduino,
-the Raspberry Pi and the motor shield. In the end it was decided the Raspberry Pi and
-the motor shield would receive power from a large USB powerbank. The Raspberry Pi would
-then power the Arduino. This seemed to work on the bench when the arduino was plugged into
+the Raspberry Pi, and the motor shield. In the end, it was decided the Raspberry Pi and
+the motor shield would receive power from a large USB power bank. The Raspberry Pi would
+then power the Arduino. This seemed to work on the bench when the Arduino was plugged into
 the PC for tuning the servo and running light tests on the motor. However, the Raspberry Pi
 could not deliver the current to the Arduino to power the servo and the logic side of the
 motor controller, this would crash the Raspberry Pi and all hell would break loose.
 To counter this issue the Arduino was given its very own 9v battery. While this is not
-perfect, it does seem to solve the problem. Idealy a dedicated Lithium Polymer
+perfect, it does seem to solve the problem. Ideally a dedicated Lithium Polymer
 battery would have been preferred, a 2200mah 7.4v LiPo would be small and light enough
-to fit on the frame, however they are not exactly cheap and the Raspberry Pi would require
+to fit on the frame, however, they are not exactly cheap and the Raspberry Pi would require
 something extra to step the voltage down to 5v.
 \par
 After the power problem was sorted, the car worked almost perfectly, it can pick up quite

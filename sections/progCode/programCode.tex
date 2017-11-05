@@ -3,22 +3,21 @@
 \begin{itemize}
   \item The controller - Written in Java. https://github.com/Kranex/ROTA-Controller
   \item The Server - Written in C. https://github.com/Kranex/ROTA-Server
-  \item The Inperpreter - Written in Arduino C. https://github.com/Kranex/ROTA-Interpreter
+  \item The Interpreter - Written in Arduino C/C++. https://github.com/NotSoScientific/ROTA-Interpreter
 \end{itemize}
-In the interest of saving trees the 700+ lines of code are not included in this document,
+In the interest of saving trees, the 700+ lines of code are not included in this document,
 if you wish to find them please use the links above to access them. A description of
-each program however, is provided below.
+each program, however, is provided below.
 
 \subsection{The Controller}
 \par
 The controller was written in Java with the help of the Android Studio IDE.
 The main function of the controller is to create two floating joysticks to allow
-users to submit input to ROTA. It is essentually an xbox or playstation controller
+users to submit input to ROTA. It is essentially an Xbox or PlayStation controller
 but without any buttons.
 One joystick is created on the left and one on the right, they will place themselves
 under the first touch on their half of the screen and the centre of the joystick
-will remain at that point until the finger is lifted again. This allows for some
-degree of personal adjustability; not everyone holds their phone the same way,
+will remain at that point until the finger is lifted again. This allows for some degree of personal adjustability; not everyone holds their phone the same way,
 and not all phones are the same size or shape, so the joysticks should not be fixed
 to one place on the screen.
 
@@ -34,10 +33,10 @@ few miliseconds. This packet consists of 5 bytes \{a,x1,y1,x2,y2\}.
    some kind of status update or emergency stop button was introduced.
   \item x1 and y1 are the influences of the left joystick. Their value will be
   between -127 to 127. (0,0) would mean the joystick is centered. (0,127) would mean
-  the joystick was centered in the x axis but pushed all the way up on the y axis.
+  the joystick was centered on the x-axis but pushed all the way up on the y-axis.
   \item x2 and y2 are just the same as x1 and y1 but are for the right joystick.
 \end{enumerate}
-The packet does not require any leading or ending byte as TCP guarentees that all
+The packet does not require any leading or ending byte as TCP guarantees that all
 packets will arrive and they will all arrive in the correct order. Thus, on the server,
 if the Server reads 5 bytes it will always read \{a,x1,y1,x2,y2\} if a packet exists to be read.
 
@@ -45,11 +44,11 @@ if the Server reads 5 bytes it will always read \{a,x1,y1,x2,y2\} if a packet ex
 \par The server is by far the most convoluted program of the three, which is thanks
 to it having been programmed in C.
 It does only one thing:
- foward all packets received from the controller, straight to the Arduino over serial.
-It does however add 127 to each of the signed bytes as the serial connection
+ forward all packets received from the controller, straight to the Arduino over serial.
+It does, however, add 127 to each of the signed bytes as the serial connection
 seemed to really dislike the signed bytes. 127 is then immediately subtracted from
 the byte when it gets to the Arduino.
-This is all handled in about 5 lines of code, however there are nearly 300 lines
+This is all handled in about 5 lines of code, however, there are nearly 300 lines
 surrounding it most of which is simply initialisation for the TCP server and serial
 connection.
 On the Raspberry Pi, the server is added to the list of programs to start at boot
@@ -57,21 +56,21 @@ with systemd, thus no login is required, the Raspberry Pi must only be booted fo
 the server to be created.
 
 \subsection{The Interpreter}
-\par The interpreter, for lack of a better name, is the program running on the arduino
+\par The interpreter, for lack of a better name, is the program running on the Arduino
 which `interprets' the x and y influences recieved from the server and translates them
-into motor speed, servo angle or what ever else we happen to connect to ROTA.
-This job could have been done with the Raspberry Pi alone, however we would then have
+into motor speed, servo angle or whatever else we happen to connect to ROTA.
+This job could have been done with the Raspberry Pi alone, however, we would then have
 had the constraints of few GPIO to communicate with, as well as the lower voltage of
-the GPIO (3.3V instead of 5V) to deal with. Thus we decided to use the arduino as the
-step between the Raspberry Pi and the extra periperipherals.
+the GPIO (3.3V instead of 5V) to deal with. Thus we decided to use the Arduino as the
+step between the Raspberry Pi and the extra peripherals.
 \par After initialising the serial connections and any global variables, the arduino then
-reads a single byte from the serial buffer and acts apon it. It keeps count of which particular
+reads a single byte from the serial buffer and acts upon it. It keeps count of which particular
 byte it is reading and then, as we have it currently set up, if it is the left y, uses
 it to set the motor speed and direction or if it is the right x, use it to set the
 servo angle. The particular stick or axis that controls each of these can easily be changed,
 the only reason we have it set up as so is that it made practical sense to split
-the controls of throttle and steering on to seperate sticks. As for why the sticks
-are cappable of moving in both axis when only one is required, it doesn't impare their
+the controls of throttle and steering on to separate sticks. As for why the sticks
+are capable of moving in both axis when only one is required, it doesn't impair their
 function, it was easier to make two identical joysticks over two unique ones and
 most importantly, if we had the time and the servos to do it, we would have like to
 have added a moveable camera. Unfortunately, this was not the case, but now at least
